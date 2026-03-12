@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+.container{
+    max-width:800px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+header{
+    text-align:center;
+    border-bottom:2px solid #eee;
+    padding-bottom:20px;
+}
+
+header h1{
+    margin:0;
+    color:#333;
+}
+
+header p{
+    color:#666;
+}
+
+section{
+    margin-top:25px;
+}
+
+h2{
+    color:#2c7be5;
+}
+
+ul{
+    padding-left:20px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    background:#2c7be5;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1a5ec8;
+}
+
+#contact{
+    margin-top:10px;
+    display:none;
+    background:#eef3ff;
+    padding:10px;
+    border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>個人履歷</h1>
+<p>學號：AU114018073</p>
+</header>
+
+<section>
+<h2>基本資料</h2>
+<ul>
+<li>姓名：你的名字</li>
+<li>學校：你的學校</li>
+<li>科系：你的科系</li>
+<li>興趣：程式設計、科技、學習新技能</li>
+</ul>
+</section>
+
+<section>
+<h2>技能</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>基本程式設計</li>
+
+
+</ul>
+</section>
+
+<section>
+<h2>專案經驗</h2>
+<ul>
+<li>簡單個人網站</li>
+<li>網頁版履歷製作</li>
+<li>JavaScript 小互動功能</li>
+</ul>
+</section>
+
+<section>
+<h2>聯絡方式</h2>
+<button onclick="showContact()">顯示聯絡資訊</button>
+
+<div id="contact">
+<p>Email：example@email.com</p>
+<p>電話：0912-345-678</p>
+</div>
+</section>
+
+</div>
+
+<script>
+function showContact(){
+    var contact = document.getElementById("contact");
+
+    if(contact.style.display === "none"){
+        contact.style.display = "block";
+    }else{
+        contact.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
