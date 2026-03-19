@@ -1,139 +1,86 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>個人履歷</title>
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f6f9;
-}
-
-.container{
-    max-width:800px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-header{
-    text-align:center;
-    border-bottom:2px solid #eee;
-    padding-bottom:20px;
-}
-
-header h1{
-    margin:0;
-    color:#333;
-}
-
-header p{
-    color:#666;
-}
-
-section{
-    margin-top:25px;
-}
-
-h2{
-    color:#2c7be5;
-}
-
-ul{
-    padding-left:20px;
-}
-
-button{
-    padding:10px 20px;
-    border:none;
-    background:#2c7be5;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#1a5ec8;
-}
-
-#contact{
-    margin-top:10px;
-    display:none;
-    background:#eef3ff;
-    padding:10px;
-    border-radius:5px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歷表</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
 
-<header>
-<h1>個人履歷</h1>
-<p>學號：AU114018073</p>
-</header>
+    <!-- 左側 -->
+    <aside class="sidebar">
+        <img src="images/profile.jpg" class="profile" alt="個人照片">
 
-<section>
-<h2>基本資料</h2>
-<ul>
-<li>姓名：洪</li>
-<li>學校：亞洲大學</li>
-<li>科系：聽力暨語言治療學系</li>
-<li>興趣：程式設計、科技、學習新技能</li>
-</ul>
-</section>
+        <h1>你的名字</h1>
+        <p class="id">學號：AU114018073</p>
 
-<section>
-<h2>技能</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>基本程式設計</li>
+        <div class="contact">
+            <p>📞 0912-345-678</p>
+            <p>📧 example@email.com</p>
+            <p>📍 台灣</p>
+        </div>
 
+        <h2>技能</h2>
 
-</ul>
-</section>
+        <div class="skill">
+            <span>HTML</span>
+            <div class="bar"><div class="html"></div></div>
+        </div>
 
-<section>
-<h2>專案經驗</h2>
-<ul>
-<li>簡單個人網站</li>
-<li>網頁版履歷製作</li>
-<li>JavaScript 小互動功能</li>
-</ul>
-</section>
+        <div class="skill">
+            <span>CSS</span>
+            <div class="bar"><div class="css"></div></div>
+        </div>
 
-<section>
-<h2>聯絡方式</h2>
-<button onclick="showContact()">顯示聯絡資訊</button>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="bar"><div class="js"></div></div>
+        </div>
 
-<div id="contact">
-<p>Email：example@email.com</p>
-<p>電話：0912-345-678</p>
+        <button onclick="toggleTheme()">切換主題</button>
+    </aside>
+
+    <!-- 右側 -->
+    <main class="main">
+
+        <section class="card">
+            <h2>自我介紹</h2>
+            <p>
+                我是一位對網頁開發充滿熱情的學生，
+                擅長使用 HTML、CSS 與 JavaScript 製作互動式網站，
+                並持續學習新技術提升自己的能力。
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>學歷</h2>
+            <ul>
+                <li>某某大學 資訊相關科系</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>經歷</h2>
+            <ul>
+                <li>網頁設計專題開發</li>
+                <li>參加程式競賽</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>作品集</h2>
+            <ul>
+                <li>個人網站</li>
+                <li>待辦事項 App</li>
+            </ul>
+        </section>
+
+    </main>
 </div>
-</section>
 
-</div>
-
-<script>
-function showContact(){
-    var contact = document.getElementById("contact");
-
-    if(contact.style.display === "none"){
-        contact.style.display = "block";
-    }else{
-        contact.style.display = "none";
-    }
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
